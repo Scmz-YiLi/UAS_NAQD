@@ -15,7 +15,7 @@ function select_feature=uar_NAQD(data,k)
 %% output
 % a reduct--the set of selected attributes.
 
-%% Calculate the standard deviation of the numerical data
+%% Calculate the standard deviation of the numerical data.
 [row, attribute]=size(data);
 delta=zeros(1,attribute);
 for j=1:attribute
@@ -49,7 +49,7 @@ for i=1:attribute
        eval(['ssr' num2str(i) '=r;']);
 end
 
-%% Algorithms topic section
+%% Algorithms topic section.
 B=1:attribute;
 x=0;
 value_sig=0;
@@ -117,6 +117,7 @@ else
    select_feature=red;
 end
 end
+
 
 
 
