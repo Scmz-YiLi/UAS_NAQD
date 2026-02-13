@@ -8,14 +8,14 @@
 %%E-mail:scmzly@scun.edu.cn
 
 function select_feature=uar_NAQD(data,k)
-%% input
+%% input %%
 % data is data matrix without decision, where rows for objects and columns for attributes. 
 % Numerical attributes should be normalized into [0,1]
 % Variable precision threshold parameter beta [0.5,1.0] with step size 0.1.
-%% output
+%% output %%
 % a reduct--the set of selected attributes.
 
-%% Calculate the standard deviation of the numerical data.
+%% Calculate the standard deviation of the numerical data. %%
 [row, attribute]=size(data);
 delta=zeros(1,attribute);
 for j=1:attribute
@@ -24,7 +24,7 @@ for j=1:attribute
     end
 end
 
-%% Calculate the neighborhood relation matrices ssk and ssr.
+%% Calculate the neighborhood relation matrices ssk and ssr. %%
 for i=1:attribute
        eval(['ssk' num2str(i) '=[];']);
        dis=pdist2(data(:,i),data(:,i));
@@ -49,7 +49,7 @@ for i=1:attribute
        eval(['ssr' num2str(i) '=r;']);
 end
 
-%% Algorithms topic section.
+%% Algorithms topic section. %%
 B=1:attribute;
 x=0;
 value_sig=0;
@@ -117,6 +117,7 @@ else
    select_feature=red;
 end
 end
+
 
 
 
