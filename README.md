@@ -1,2 +1,2 @@
 # UAS_NAQD
-Unsupervised Hybrid Attribute Selection Based on Variable Precision Neighborhood Rough Sets
+Unsupervised hybrid attribute selection based on variable precision neighborhood rough sets
